@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./main.js"></script>
+  <title>Le Japon en Boîte</title>
+</head>
+<body>
+  <div id="containerMain">
+      <!-- Entête de page -->
+    <div id="header" onmouseleave="setTimeout(resetMouv, 1500)">
+      <a href="index.html" class="logo" onmouseenter="mouvement()">Le Japon en <span>Boîte</span></a>
+      <form action="" id="searchBar">
+        <input
+          type="search" 
+          name="search"
+          placeholder="Que recherchez-vous ?" 
+          id="searchPlace" 
+          onmouseenter="onmouseSearch()"
+          onmouseleave="setTimeout(resetSearch, 500)"
+          onfocus="shadowSearch()" 
+          onfocusout="resetSearch()"
+        >
+        <input type="submit" value="Go !" id="buttonSearch">
+      </form>
+      <nav>
+        <a href="#menu" onclick="openMenu()">Menu</a>
+      </nav>
+    </div>
+    <!-- Menu -->
+    <div id="menu">
+      <nav>
+        <ul>
+          <li><a href="">Acceuil</a></li>
+          <li><a href="">Catégorie</a></li>
+          <li><a href="">Mention légal</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Sign IN</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- nouveauté -->
+    <p id="nouveauteTexte">Nouveauté</p>
+    <div id="nouveautePhoto">
+      <img src="./assets/400x400.png" alt="Photo">
+      <img src="./assets/400x400.png" alt="Photo">
+      <img src="./assets/400x400.png" alt="Photo">
+    </div>
+    <p id="categorieTexte">Catégorie</p>
+    <div id="categoriePhoto">
+      <img src="./assets/400x400.png" alt="Photo">
+      <img src="./assets/400x400.png" alt="Photo">
+      <img src="./assets/400x400.png" alt="Photo">
+    </div>
+    <div id="footer">
+      mention légal
+    </div>
+  </div>
+</body>
+</html>
